@@ -29,8 +29,7 @@ ui-page-theme-i{
 .ui-bar-i h1.ui-title{
     color:#fff;
     text-transform:uppercase;
-    font-family: 'Roboto',sans-serif; 
-    font-weight:bold;
+    font-family: 'Open Sans', sans-serif; font-weight:bold;
     font-size:22px;
 
 }
@@ -39,7 +38,7 @@ ui-page-theme-i{
 
 .ui-page-theme-i .category-header {
     color: #191919;
-    font-family: 'Roboto',sans-serif;
+    font-family: sans-serif;
     font-size: 14px;
     font-weight: bold;
     margin: 10px 5px 5px;
@@ -89,7 +88,7 @@ ui-page-theme-i{
 
 .header{     
    color: #FFFFFF;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Open Sans',sans-serif;
     /*font-size: 22px; */
     font-size: 1em;
     font-weight: bold;
@@ -160,7 +159,7 @@ ui-page-theme-i{
 
 .back {
     display: block;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Open Sans',sans-serif;
     margin: 3px 5px 3px 15px;
     font-weight:normal;
     font-size:1.5em;
@@ -210,7 +209,7 @@ ui-page-theme-i{
     /*width: 320px; */
     width:100%;
    -webkit-overflow-scrolling: touch;
-    /*margin-top:65px;*/
+    margin-top:65px;
    
 }
 .wrapper-productdetails  span{ 
@@ -227,7 +226,7 @@ ui-page-theme-i{
     background-color: #4c4c4c;
     box-sizing: border-box;
     display: inline-block;
-    height: 70px;
+    height: 60px;
     padding: 5px 10px 10px;
     width: 100px;
     margin-right:-4px;
@@ -306,7 +305,7 @@ max-width:100%; max-height:100%;
     width: 100%;
 }
 .body-content{ 
-    margin:20px; 
+    margin:10px; 
     color:#fff;
 }
 .trip-detail {
@@ -340,37 +339,18 @@ max-width:100%; max-height:100%;
 }
 
 .deck-wrapper {
-   /* height: 120px; 
+   /* height: 120px; */
     height:85px;
-    margin-top:-3px;*/
-    
-    left: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding-bottom: 1px;
-    padding-left: 0;
-    white-space: nowrap;
-    width: 100%;
-}
-
-.deck-wrapper span.deck {
-    background-color: #4c4c4c;
-    border-right: 1px solid #000;
-    box-sizing: border-box;
-    display: inline-block;
-    /*height: 70px;
-    padding: 5px 10px 10px;*/
-    margin-right: -4px;    
-    width: 100px;
+    margin-top:-3px;
 }
 
 .deck-select {
 
-    /*float: left;
-    height: 120px;
-    padding: 5px 0px 10px;
+    float: left;
+    /*height: 120px;
+    padding: 5px 0px 10px;*/
     border-right: 1px solid #000;
-    width: 25%;*/
+    width: 25%;
 }
 .deck-select a{
     text-decoration:none;
@@ -417,7 +397,7 @@ max-width:100%; max-height:100%;
 }
 
 .price-val {
-    font-size: 1.2em;
+    font-size: 0.8em;
 }
 .journey-map{
      /*border-top:1px solid #323232;
@@ -500,24 +480,21 @@ max-width:100%; max-height:100%;
 .journeydetails-wrapper{
     margin-top:20px;
 }
-.tree-box{
-    /*width:80%; */
-    border-left:2px solid #0293fc;
-    clear:both; 
-    margin-left:25px; 
-    color:#fff; 
-    position:relative; 
-    padding-left:25px; 
-    padding-bottom:20px;
-    margin-right:15px;
-    
+.tree-box {
+    border-left: 2px solid #0293fc;
+    clear: both;
+    color: #fff;
+    margin-left: 25px;
+    margin-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
 }
+
 .tree-box p {
-   
-    margin: 0 ;
+    margin: 0;
     padding-bottom: 10px;
     white-space:normal;
-     white-space: normal;
 }
 .tree {
     background: none repeat scroll 0 0 #0293fc;
@@ -696,7 +673,7 @@ span.pdp-img {
 
 .thumbimg .text{
     color: #fff;
-    font-family: 'Roboto',sans-serif;
+    font-family: open sans;
     font-size: 1em;
     left: 5px;
     position: absolute;
@@ -738,7 +715,7 @@ span.pdp-img {
 
 .thumbimg .text{
     color: #fff;
-    font-family: 'Roboto',sans-serif;
+    font-family: open sans;
     font-size: 1em;
     left: 5px;
     position: absolute;
@@ -817,7 +794,7 @@ span.pdp-img {
     
         }
         .journeydetails-wrapper {
-            /*margin-bottom: 120px;*/
+            margin-bottom: 120px;
             margin-top: 20px;
         }
 

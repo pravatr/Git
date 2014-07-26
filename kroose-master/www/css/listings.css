@@ -24,7 +24,7 @@ html {
 body {
     background:#000;
   /*background: #80d5ee ;*/
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Open Sans', sans-serif;
     font-size:100%;
 
 }
@@ -129,25 +129,22 @@ img {
     
 
 }
-.wrap1{  
-    /*float: left;
-    margin-top:0px;
-    position:relative;
-    padding: 10px 10px 10px;
-     bottom: 70px;
-    font-family: 'Open Sans', sans-serif; font-weight:bold; */
-    
-    padding-right: 5px;
-    width: 70%;
-    white-space:normal;
+
+.wrap1 {
+padding-right: 5px;
+white-space: normal;
+width: 70%;
 }
+
+
+
 .wrap1 > a {
     color: #fff;
     text-decoration: none;
 }
 
 .trip-name {
-   font-family: 'Roboto',sans-serif;
+   font-family: 'Open Sans', sans-serif; 
      font-size: 1em;
 
     margin: 0; color:#fff;
@@ -164,40 +161,32 @@ img {
 }
 .trip-type {
     
-    font-family: 'Roboto',sans-serif;
-    font-weight:400;
+    font-family: 'Open Sans', sans-serif; font-weight:400;
     font-size: 0.8em;
     line-height: 16px;
     /*letter-spacing:0.5px;*/
 }
 
 .wrap2{  
-    
-    /*float: right;
-    margin-top:0px;
-    position:relative;
-    padding: 10px 10px 10px;
-     bottom: 70px;
-    font-family: 'Open Sans', sans-serif; font-weight:bold;
-    border:1px solid red; */
-    
-    bottom: 10px;
-    padding-left: 5px;
-    position: absolute;
-    right: 10px;
-    width: 30%;
+
+bottom: 10px;
+padding-left: 5px;
+position: absolute;
+right: 10px;
+width: 30%;
+
 }
+
 .price {
-    
-    display: block;
-    font-family: 'Roboto',sans-serif;
-    font-weight:300;
-    font-size: 20px;
-    text-align: right;
-    /*float:right;
-    width:30%;
-    letter-spacing: 0.5px;*/
+
+display: block;
+font-family: 'Open Sans', sans-serif;
+font-weight:300;
+font-size: 20px;
+text-align: right;
+
 }
+
 .onwards {
     
     /*color: #FFFFFF;
@@ -315,7 +304,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
     /*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); */
     color: #fff;
-    font-family: 'Roboto',sans-serif;
+    font-family: open sans;
     font-size: 1.6em;
     font-weight: 600;
     left: 15px;
@@ -350,8 +339,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     text-align: center;
     width: 116px;
 
-    font-family: 'Roboto',sans-serif;
-    font-weight:bold;
+    font-family: 'Open Sans', sans-serif; font-weight:bold;
     font-size: 11px;
     color: #074375;
     text-transform:uppercase;
@@ -381,7 +369,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     /*border-bottom: 2px solid #007DBD;*/
     color: #074375;
     display: inline-block;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 11px;
     font-weight: bold;
     margin-bottom: 0;
@@ -396,7 +384,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     /*border-bottom: 2px solid #007DBD;*/
     color: #074375;
     display: inline-block;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 0;
@@ -475,7 +463,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     margin-right: 0.3%;
     opacity: 1;
     padding: 5px 0 0 5px;
-    width: 19.9%;
+    width: 19.5%;
 }
 .filters li:last-child {
     margin-right: 0%;

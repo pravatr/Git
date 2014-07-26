@@ -1,0 +1,643 @@
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        
+        <title>Kool Cruise</title>
+        
+       
+        <link href="css/google.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-awesome.min.css" rel="stylesheet"  type="text/css"/>
+        <link href="css/font.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery.mobile.theme.css" rel="stylesheet"  type="text/css"/>
+        <link href="css/listings.css" rel="stylesheet"  type="text/css"/>     
+        <link href="css/jquery-mobile-i.css"  rel="stylesheet" type="text/css"/>
+        
+
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/jquery.mobile-1.4.2.min.js"></script>
+
+        
+        
+        <!-- Home screen icons -->
+        <script type="text/javascript">
+		document.addEventListener("touchstart", function() {},false);
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+		   navigator.splashscreen.hide();
+	    }
+		
+		$( document ).on( "mobileinit", function() {
+			$.mobile.loader.prototype.options.text = "loading";
+			$.mobile.loader.prototype.options.textVisible = false;
+			$.mobile.loader.prototype.options.theme = "d";
+			$.mobile.loader.prototype.options.html = "";
+		});		
+		
+        WebFont.load({
+            google: {
+              families: ['Open Sans']
+            }
+        });
+         
+        
+
+       </script>
+        <style>
+                element:hover, element:active {
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-user-select: none;
+                -webkit-touch-callout: none
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+
+       <div data-role="page" id="main-page" data-theme="i" >
+           
+            <div data-role="header"  data-theme="i" class="fix-header"> 
+                   <div class="header secondary-title">Kool Cruise</div>
+            </div>
+
+
+ 
+                  
+                  <div id="themeWraper" class="wrapper theme-col touch">
+
+                    <span id="family"  class="thumbimg" data-contentdata="theme"  onclick="javascript:themeSelector('family');" >
+                        <img src="img/theme/family.png" width="" height="" />
+                        <span class="mask"></span>
+                        <span class="text">Family</span>
+                    </span>
+					
+                    <span id="romantic"  class="thumbimg" data-contentdata="theme" onclick="javascript:themeSelector('romantic');">
+                        <img src="img/theme/romantic.png" width="" height="" />
+                        <span class="mask"></span>
+                        <span class="text">Romantic</span>
+                    </span>
+					
+                    <span id="single"  class="thumbimg" data-contentdata="theme" onclick="javascript:themeSelector('single');">
+                        <img src="img/theme/single.png" width="" height="" />
+                        <span class="mask"></span>
+                        <span class="text">Single</span>
+                    </span>
+					
+                    <span id="beach"  class="thumbimg" data-contentdata="theme" onclick="javascript:themeSelector('beach');">
+                        <img src="img/theme/beach.png" width="" height="" />
+                        <span class="mask"></span>
+                        <span class="text">Beach</span>
+                    </span>
+					
+                    <span id="summer"  class="thumbimg" data-contentdata="theme" onclick="javascript:themeSelector('summer');">
+                        <img src="img/theme/shopping.png" width="" height="" />
+                        <span class="mask"></span>
+                       <span class="text">Shopping</span>
+                    </span>
+					
+                    <span id="senior"  class="thumbimg" data-contentdata="theme" onclick="javascript:themeSelector('senior');">
+                        <img src="img/theme/senior.png" width="" height="" />
+                        <span class="mask"></span>
+                        <span class="text">Senior</span>
+                    </span>
+					
+                     <span id="cultural"  class="thumbimg" data-contentdata="theme" onclick="javascript:themeSelector('cultural');">
+                        <img src="img/theme/cultural.png" width="" height="" />
+                         <span class="mask"></span>
+                        <span class="text">Cultural</span>
+                    </span>
+					
+                    <span id="sports"  class="thumbimg" data-contentdata="theme" onclick="javascript:themeSelector('sports');">
+                        <img src="img/theme/sports.png" width="" height="" />
+                        <span class="mask"></span>
+                        <span class="text">Sports</span>
+                    </span>
+
+                    <span id="summer"  class="thumbimg" data-contentdata="theme" onclick="javascript:themeSelector('summer');">
+                        <img src="img/theme/summer.png" width="" height="" />
+						<span class="mask"></span>
+                        <span class="text">Summer</span>
+                    </span>
+
+                  </div>
+                 
+
+
+   
+                  <div id="destinationWraper" class="wrapper dest-col touch">                      
+                     <span id="alaska"  class="thumbimg" data-contentdata="destination" onclick="javascript:destinationSelector('alaska');">
+                        <img src="img/destination/alaska.png" width="" height=""  />
+                         <span class="mask"></span>
+                        <span class="text">Alaska</span>
+                    </span>
+                      
+                    <span id="bahamas"  class="thumbimg" data-contentdata="destination" onclick="javascript:destinationSelector('bahamas');">
+                        <img src="img/destination/florida.png" width="" height=""  />
+                        <span class="mask"></span>
+                        <span class="text">Bahamas <br /> & </>Florida</span>
+                    </span>
+                      
+                    <span id="bermuda"  class="thumbimg" data-contentdata="destination" onclick="javascript:destinationSelector('bermuda');">
+                        <img src="img/destination/bermuda.png" width="" height=""  />
+                        <span class="mask"></span>
+                        <span class="text">Bermuda</span>
+                    </span>      
+					
+                    <span id="caribbean"  class="thumbimg" data-contentdata="destination" onclick="javascript:destinationSelector('caribbean');">
+                        <img src="img/destination/caribbean.png" width="" height="" />
+                        <span class="mask"></span>
+                        <span class="text">Caribbean</span>
+                    </span>
+                      
+                    <span id="canada"  class="thumbimg" data-contentdata="destination" onclick="javascript:destinationSelector('canada');">
+                        <img src="img/destination/canada-newengland.png" width="" height=""  />
+                        <span class="mask"></span>
+                       <span class="text">Canada <br />& New England</span>
+                    </span>
+					
+                    <span id="europe"  class="thumbimg" data-contentdata="destination" onclick="javascript:destinationSelector('europe');">
+                        <img src="img/destination/europe.png" width="" height=""  />
+                        <span class="mask"></span>
+                        <span class="text">Europe</span>
+                    </span>
+
+                    <span id="southamerica"  class="thumbimg" data-contentdata="destination" onclick="javascript:destinationSelector('southamerica');">
+                        <img src="img/destination/southamerica.png" width="" height=""  />
+                        <span class="mask"></span>
+                        <span class="text">South America</span>
+                    </span>
+					
+                  </div>
+                  
+                  <div class="clearfix"></div>
+
+            <div  class="booking-btn" data-theme="i">
+                <a id="cruiseCount"  href="javascript:viewList();" data-role="none" data-transition="slide" data-theme="i" class="booknow">Show All Cruises</a>
+            </div>
+			
+        </div>
+        
+        
+<!-- Property List Page two Starts Here -->
+        
+        <div data-role="page" id="Prop-card" data-theme="i" class="fix-header">
+            <div data-role="header"  data-theme="i">
+                   <a href="javascript:gotoMain();" data-role="button" data-direction="reverse" data-transition="slide"> <span class="icon icon-caret01 prev-caret"></span> <span class="back"></span></a>
+                   <div  id="listHCount" class="header secondary-title">Cruises</div>
+            </div>
+
+			<!--  List Page Item Card Template [Starts Here] -->
+			<div id="listTemplate" style="display:none;">
+				   <div class="container">
+						<div class="img">
+							<a href="javascript:viewDetails('#cid#')" data-role="none" data-transition="slide">
+								<img src="#img#" width="100%"/>
+								<div class="list-gradiant gradiant-box"></div>
+								<span class="mask"></span>
+								<div class="details">
+									 <div class="wrap1">
+										  <div class="icon icon-#rating#"></div>
+										 <h2 class="trip-name">#name#</h2>
+										 <div class="trip-type"><span>#dfrom#</span> <span class="dot">.</span> <span>#ndate#</span></div></a>
+									 </div>
+									  <div class="wrap2">
+										  <span class="price">
+											  <span class="dolar">$</span><span class="amount">#price#</span>
+											  <span class="onwards">Onwards</span>
+										  </span>                                   
+									  </div>
+								</div>                       
+						</div>
+					</div>			
+			</div>
+			<!--  List Page Item Card Template [Ends Here] -->
+			
+			<div id="listPageWrapper" class="wrapper pagewrapper"  data-theme="i" >  
+			</div>   
+		 
+            
+            <div class="footer">
+                <div class="filtermask"></div>
+                <div class="filterlinks">
+                <!--<div class="filters-text">Filters</div>-->
+                <div class="filters">
+                    <ul id="filterList">
+					    <li id="all" onclick="filterDuration(this,'all')" class="selected">All <br />Days</li>
+                        <li id="fewdays" onclick="filterDuration(this,'fewdays')" >Few <br />Days</li>
+                        <li id="oneweek" onclick="filterDuration(this,'oneweek')" >1 <br />Week</li>
+                        <li id="twoweek" onclick="filterDuration(this,'twoweek')" >2 <br />Weeks</li>
+                        <li id="15days"  onclick="filterDuration(this,'15days')" >2+ <br />Weeks</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+<!-- Proporty List Page Ends Here -->
+        
+        
+<!-- Property Details Page Starts Here -->
+
+            
+        <div data-role="page" id="pro-details" data-theme="i" class="fix-header">
+              
+        </div>
+        
+        
+        <!-- Journey details -->
+        
+         <div data-role="page" id="journey" data-theme="i" class="fix-header">
+            <div data-role="header"  data-theme="i">
+                   <a href="#pro-details" data-role="button" data-direction="reverse" data-transition="slide"> <span class="icon icon-caret01 prev-caret"></span> <span class="back"></span></a>
+                   <div class="header secondary-title">Journey</div>
+            </div>
+             
+             <div class="clearfix"></div>
+             
+             <div class="scrollwrapper">
+                 
+                 <div class="journey-map">
+                    <img src="img/journey-map.png" width="100%" />
+                 </div>
+                 
+                 <div class="journeydetails-wrapper">
+                    <div class="tree-box">
+                        <div class="tree"></div>
+                        <div class="days"> Day 1</div>
+                        <h2>Miami 4pm</h2>
+                        <p>Embarks to cruise into sunset with on deck welcome dinner by our world renowned Chef James May.</p>
+                        <p>Favorite Cruise Line - Readers Choice Award, Cruise Critic</p>
+                    </div>
+                    <div class="tree-box">
+                        <div class="tree"></div>
+                        <div class="days"> Day 2</div>
+                        <h2>At Sea</h2>
+                        <p>Special screening of the n
+ewly release Hollywood movies on board, with wine form Italy.
+
+</p>
+                    </div>
+                    <div class="tree-box">
+                        <div class="tree"></div>
+                        <div class="days"> Day 3</div>
+                        <h2>Phillisburg</h2>
+                        <p>Dismbark at Phillispurg</p>
+                    </div>
+                    <div class="tree-box noborder">
+                        <div class="tree"></div>
+                        <div class="days">Last day</div>
+                        <h2>Miami 4pm</h2>
+                        <p>Embarks to cruise into sunset with on deck welcome dinner by our world renowned Chef James May.</p>
+                    </div>
+                 </div>
+             
+             </div>
+
+        </div>
+        <!--// Journey details //-->
+        
+        
+        <!-- Deck Details -->
+        
+         <div data-role="page" id="deck-detail" data-theme="i" class="fix-header">
+            <div data-role="header"  data-theme="i">
+                   <a href="#pro-details"  data-role="button" data-direction="reverse" data-transition="slide"> <span class="icon icon-caret01 prev-caret"></span> <span class="back"></span></a>
+                   <div class="header secondary-title">Upper Deck</div>
+            </div>
+             
+             <div class="clearfix"></div>
+             
+           <div class="scrollwrapper">
+               <div class="wrapper4">
+                  <span class="pdp-img">
+                    <img width="100%" height="100%" src="img/deck/JEWEL.BALCONY-modal-01_12.jpg">
+                </span>
+               </div>
+               
+               <div class="deck-content-wrapper">
+                <p>Relax in lively style and smart sophistication. Our modern inside state rooms are highlited with appointments like a TV, sitting area, room service and more.</p>
+                
+                   
+                   <h3>What's included?</h3>
+                   <ul>
+                    
+                       <li><span class="amenity">TV</span></li>
+                       <li><span class="amenity">Sofa</span></li>
+                       <li><span class="amenity">Hair dryer</span></li>
+                       <li><span class="amenity">Refrigerator</span></li>
+                   </ul>
+               </div>
+               
+           </div>
+             
+
+        </div>
+        
+        <!--// Deck Details //-->
+        
+        
+        
+<!-- Property Details Page Ends Here -->
+    <script src="cordova.js"></script>     
+    </body>
+    <script type="text/javascript">
+	
+	    refreshCount();
+	
+        $(document).ready(function(){
+            var _heightBody = $(window).height() - $(".booking-btn").height() -60;
+            $(".wrapper").css({"height":(_heightBody)+"px", "overflow-y":"scroll;"});
+           
+           
+        });
+    
+		var themeSelected       = '';
+		var destinationSelected = '';
+		var durationSelected    = '';
+		var cruisesFound        = 0;	
+		var cruiseList          = '';
+        var listHtml            = '';
+		var currentCID          = '';
+		var cruiseJsonDetails   = '';
+		////////////////////////////////////////////////////////////////////////////////////
+		function themeSelector(themSel) {
+		    			
+			if(themeSelected == themSel){
+				$("#themeWraper span span").removeClass("selected");
+				themeSelected = '';
+				refreshCount();
+			}else{
+				themeSelected = themSel;
+				$("#themeWraper span span").removeClass("selected");
+				$("#" + themeSelected + " span").addClass("selected");
+				refreshCount();
+			}
+			
+		} 
+		////////////////////////////////////////////////////////////////////////////////////
+		function destinationSelector(destSel) {
+			if(destinationSelected == destSel){
+				$("#destinationWraper span span").removeClass("selected");
+				destinationSelected = '';
+				refreshCount();
+			}else{
+				destinationSelected = destSel;
+				$("#destinationWraper span span").removeClass("selected");
+				$("#" + destinationSelected+ " span").addClass("selected");
+				refreshCount();
+			}	
+		}		
+		////////////////////////////////////////////////////////////////////////////////////
+		function refreshCount(){
+		
+		    blockViewCruises();
+		    if(jQuery.isEmptyObject(cruiseList) || cruiseList == '' ){
+			   initJsonObject();  
+			}else{
+			   calculateCount();
+			}
+		
+			unBlockViewCruises();
+			
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function calculateCount(){
+		    listHtml     = '';
+		    cruisesFound = 0;
+			if(themeSelected == '' && destinationSelected == ''){
+ 			    //alert('durationSelected = '+durationSelected);
+				for(var i=0, len=cruiseList.length; i < len; i++) {
+				    if( durationSelected == '' || cruiseList[i].filterDuration == durationSelected){
+						listHtml = listHtml.concat( buildCard(cruiseList[i].cruiseId, cruiseList[i].destinationImages[0], cruiseList[i].cruiseName, cruiseList[i].destinationFrom, cruiseList[i].startingFrom , cruiseList[i].priceFrom, cruiseList[i].shipOverallRating) ); 
+						cruisesFound++;
+					}	
+				}
+			}else{
+			    cruisesFound = 0;
+				for(var i=0, len=cruiseList.length; i < len; i++) {
+ 				   if( themeSelected != '' 
+				           && destinationSelected != ''  
+				           && cruiseList[i].filterDestination.indexOf(destinationSelected) > -1 
+					       && cruiseList[i].filterLifestyle.indexOf(themeSelected) > -1 ){
+						   
+						   if( durationSelected == '' || cruiseList[i].filterDuration == durationSelected){
+							   cruisesFound++;
+							   listHtml = listHtml.concat( buildCard(cruiseList[i].cruiseId, cruiseList[i].destinationImages[0], cruiseList[i].cruiseName, cruiseList[i].destinationFrom, cruiseList[i].startingFrom , cruiseList[i].priceFrom, cruiseList[i].shipOverallRating) ); 
+						   }
+				   }else if(themeSelected == '' && destinationSelected!='' && cruiseList[i].filterDestination.indexOf(destinationSelected) > -1  ) { 
+				           if( durationSelected == '' || cruiseList[i].filterDuration == durationSelected){
+							   cruisesFound++; 
+							   listHtml = listHtml.concat( buildCard(cruiseList[i].cruiseId, cruiseList[i].destinationImages[0], cruiseList[i].cruiseName, cruiseList[i].destinationFrom, cruiseList[i].startingFrom , cruiseList[i].priceFrom, cruiseList[i].shipOverallRating) );
+						   }							 
+			       }else if(destinationSelected == '' && themeSelected!='' && cruiseList[i].filterLifestyle.indexOf(themeSelected) > -1  ) { 
+				           if( durationSelected == '' || cruiseList[i].filterDuration == durationSelected){
+							   cruisesFound++; 
+							   listHtml = listHtml.concat( buildCard(cruiseList[i].cruiseId, cruiseList[i].destinationImages[0], cruiseList[i].cruiseName, cruiseList[i].destinationFrom, cruiseList[i].startingFrom , cruiseList[i].priceFrom, cruiseList[i].shipOverallRating) );
+						   }							 
+				   }//endif
+				}//endfor		  
+			}//endif
+			
+		    if( cruisesFound > 1 ){
+			 $("#cruiseCount").html("View "+cruisesFound+" Cruises"); 	
+			 $("#listHCount").html(cruisesFound+" Cruises Found"); 	
+									 
+		    }else if( cruisesFound == 1 ){
+			 $("#cruiseCount").html("View "+cruisesFound+" Cruise"); 	
+			 $("#listHCount").html(cruisesFound+" Cruise Found"); 	
+									 
+		    }else{
+			 $("#cruiseCount").html("No Cruises Found!"); 	   
+			 $("#listHCount").html("No Cruises Found"); 
+		    }
+		
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function initJsonObject(){
+		    var jsonUrl = 'http://107.161.124.98:8080/zap-capi-1.0/rest/cruise/list';
+			
+			$.getJSON(jsonUrl, function(data){
+			    cruiseList = data.cruiseList; 
+				calculateCount();
+			});		
+			
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function blockViewCruises(){
+		   $("#cruiseCount").addClass("disabled");
+		   $("#cruiseCount").html("<img src='css/images/ajax-loader.gif' height='29'/>");
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function unBlockViewCruises(){
+		  $("#cruiseCount").removeClass("disabled");
+		}
+		////////////////////////////////////////////////////////////////////////////////////		
+		function buildCard(cid, img, name, dfrom, ndate, price, rating){
+		    var itemTemplate = $("#listTemplate").html();
+			
+			itemTemplate     = itemTemplate.replace("#cid#",cid);
+		    itemTemplate     = itemTemplate.replace("#img#",img);
+			itemTemplate     = itemTemplate.replace("#name#",name);
+			itemTemplate     = itemTemplate.replace("#dfrom#",dfrom);
+			itemTemplate     = itemTemplate.replace("#ndate#",ndate);
+			itemTemplate     = itemTemplate.replace("#price#",price);
+			itemTemplate     = itemTemplate.replace("#rating#",rating);
+			return itemTemplate;
+		}
+		
+		function viewList(){
+		    $("#listPageWrapper").html(listHtml);
+			$("#all").addClass("selected"); 
+			$.mobile.navigate( "#Prop-card" );			
+		}	
+		
+		////////////////////////////////////////////////////////////////////////////////////
+		function showLoader(){
+			$.mobile.loading( 'show', {
+					text: 'Loading',
+					textVisible: true,
+					theme: 'd',
+					textonly: false,
+					html: ''
+			});			
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function hideLoader(){
+			$.mobile.loading( 'hide');			
+		}		
+		////////////////////////////////////////////////////////////////////////////////////	
+		function viewDetails(cid){
+		        currentCID        = cid;  
+				cruiseJsonDetails = '';
+				showLoader();
+				
+				var detailsUrl = 'http://107.161.124.98:8080/zap-capi-1.0/rest/html/cruise/details/'+cid+'/cruiseid';
+                $.ajax({
+                    type: "GET",
+                    url: detailsUrl,
+                    cache: false,
+                    dataType: "html",
+                    success: onSuccess,
+                    error: fatalErrorGot
+                });	
+
+				var detailsJsonUrl = 'http://107.161.124.98:8080/zap-capi-1.0/rest/cruise/details/'+cid+'/cruiseid';
+				$.getJSON(detailsJsonUrl, function(data){
+					cruiseJsonDetails = data; 
+				});	
+				
+				hideLoader();
+			
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function onSuccess(data) {
+			$("#pro-details").html(data);
+			$.mobile.navigate( "#pro-details" );
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function fatalErrorGot(request, status , error){
+			alert('Error Occurred '+error);
+		}				
+	    ////////////////////////////////////////////////////////////////////////////////////
+		function refreshPrice(obj, cid, pdate){
+		    if(cruiseJsonDetails!=''){
+			   var itenaryDates = cruiseJsonDetails.cruiseDetails.itineraryDates;
+			   for(var i=0, len=itenaryDates.length; i < len; i++) {
+			       if( pdate == itenaryDates[i].date){
+				      for(var j=0, jlen=itenaryDates[i].itineraryPrice.length; j < jlen; j++) {
+					      var catName  = itenaryDates[i].itineraryPrice[j].categoryName;
+						  var catPrice = itenaryDates[i].itineraryPrice[j].leadPrice;
+				          $("#"+catName+"-ds4").html(catPrice); 
+						  /////////////////////////////////////
+						  //if(catPrice.indexOf('S') > -1 || catPrice.indexOf('N') > -1){
+						  //   $(".dollar").html("");
+						  //}else{
+						  //   $(".dollar").html("$");
+						  //}
+						  /////////////////////////////////////
+					  }//endforj
+				   }//endif
+			   }//endfori
+			   var newDate = pdate+"-dsa";
+			   $(".active-select-date").removeClass("active-select-date");
+			   obj.className = obj.className + " active-select-date";
+ 			   
+			}
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function filterDuration(obj,nodays){
+		
+		    if(obj.className == 'selected'){
+			  $("#"+nodays).removeClass("selected");
+			  durationSelected = '';
+			}else{
+   			   $( "#filterList li" ).each(function( index ) {
+			       $( this ).removeClass("selected");
+			   });				
+			   $("#"+nodays).addClass("selected"); 
+			   
+			   if(nodays != 'all'){
+			     durationSelected = nodays;
+			   }else {
+			     durationSelected = '';
+               }			   
+			}
+			refreshCount();
+			$("#listPageWrapper").html(listHtml);
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function gotoMain(){
+		    durationSelected = '';
+ 		    $( "#filterList li" ).each(function( index ) {
+			   $( this ).removeClass("selected");
+		    });			
+		    refreshCount();
+		    $.mobile.navigate( "#main-page" );
+		    
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		function selectPrice(obj, deckSel){
+		
+		    if(obj.className == 'deck-price active-select-price'){
+			  $("#"+deckSel+"-ds1").removeClass("selected");
+			  $("#"+deckSel+"-ds2").removeClass("active-select-price");
+			  $("#"+deckSel+"-ds2").removeClass("active-select-deck");
+			  $("#"+deckSel+"-ds3").removeClass("active-select-price");
+			}else{
+			
+
+   			   $( "#deckWrapperId div" ).each(function( index ) {
+			       $( this ).removeClass("selected");
+			   });	
+
+   			   $( "#deckWrapperId div a div" ).each(function( index ) {
+			       $( this ).removeClass("active-select-deck");
+			   });	
+			   
+   			   $( "#deckWrapperId div div" ).each(function( index ) {
+			       $( this ).removeClass("active-select-price");
+			   });			   
+			   
+			   
+			   $("#"+deckSel+"-ds1").addClass("selected");
+			   $("#"+deckSel+"-ds2").addClass("active-select-deck");
+			   $("#"+deckSel+"-ds3").addClass("active-select-price");
+			   
+			}		   
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+    </script>			
+</html>
